@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      “寻"
+title:      “时光预言"
 subtitle:   " \"Something about last year\""
 date:       2019-09-20 00:00:00
 author:     "Tp"
