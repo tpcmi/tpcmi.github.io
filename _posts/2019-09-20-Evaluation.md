@@ -26,6 +26,7 @@ tags:
 
 - **精确率（precision）**:
 $P=\dfrac {TP}{TP+FP}$
+<a href="https://www.codecogs.com/eqnedit.php?latex=P=\frac{TP}{TP&plus;FP}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P=\frac{TP}{TP&plus;FP}" title="P=\frac{TP}{TP+FP}" /></a>
 - **召回率（recall）：**
 $R=\dfrac {TP}{TP+FN}$
 - **F1**的值就是精确率和召回率的调和均值：
