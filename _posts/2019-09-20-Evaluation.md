@@ -25,16 +25,15 @@ tags:
 此刻 `TP=35`,`FP=10`,`FN=15`,`TN=40`
 
 - **精确率（precision）**:
-$P=\dfrac {TP}{TP+FP}$
 <a href="https://www.codecogs.com/eqnedit.php?latex=P=\frac{TP}{TP&plus;FP}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P=\frac{TP}{TP&plus;FP}" title="P=\frac{TP}{TP+FP}" /></a>
 - **召回率（recall）：**
-$R=\dfrac {TP}{TP+FN}$
+<a href="https://www.codecogs.com/eqnedit.php?latex=R=\frac{TP}{TP&plus;FN}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?R=\frac{TP}{TP&plus;FN}" title="R=\frac{TP}{TP+FN}" /></a>
 - **F1**的值就是精确率和召回率的调和均值：
-$\dfrac {2}{F_{1}}=\dfrac {1}{p}+\dfrac {1}{R}$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dfrac&space;{2}{F_{1}}=\dfrac&space;{1}{p}&plus;\dfrac&space;{1}{R}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dfrac&space;{2}{F_{1}}=\dfrac&space;{1}{p}&plus;\dfrac&space;{1}{R}" title="\dfrac {2}{F_{1}}=\dfrac {1}{p}+\dfrac {1}{R}" /></a>
 
 调整后
 
-$F_{1}=\dfrac {2PR}{P+R}=\dfrac {2TP}{2TP+FP+FN}$
+<a href="https://www.codecogs.com/eqnedit.php?latex=F_{1}=\dfrac&space;{2PR}{P&plus;R}=\dfrac&space;{2TP}{2TP&plus;FP&plus;FN}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_{1}=\dfrac&space;{2PR}{P&plus;R}=\dfrac&space;{2TP}{2TP&plus;FP&plus;FN}" title="F_{1}=\dfrac {2PR}{P+R}=\dfrac {2TP}{2TP+FP+FN}" /></a>
 
 
 
