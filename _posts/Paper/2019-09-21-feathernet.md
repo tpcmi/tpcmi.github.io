@@ -1,5 +1,4 @@
 ---
-
 layout:     post
 title:      “【R】FeatherNets: Convolutional Neural Networks as Light as Featherfor Face Anti-spoofing"
 date:       2019-09-21 24:00:00
@@ -7,7 +6,7 @@ author:     "Tp"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - CV
-
+    - Paper
 ---
 
 
