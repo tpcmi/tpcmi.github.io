@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      “【R】MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
-date:       2019-10-09 24:00:00
+date:       2019-10-09 00:00:00
 author:     "Tp"
 header-img: "img/post-bg-2015.jpg"
 tags:
@@ -25,6 +25,8 @@ tags:
 ### 4.Squeezentnet
 
 ### 5.Structured transform networks and Deep fried convnets(结构变换网络)
+
+### 6.Obtain small networks：shrinking，factorizing，compressing pretrained networks，distillation
 
 
 
@@ -62,7 +64,10 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 
 
-## Width multiplier
+## Width multiplier，α
+
+- 该参数用于控制特征图的channel数量
+- 对于depthwise卷积操作，其计算量为：![](/img/mobilenet/宽度超参数计算量.jpg)
 
 
 
@@ -70,7 +75,11 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 
 
-## Resolution multiplier
+## Resolution multiplier，ρ
+
+- 该参数用于控制特征图的宽和高。
+
+- 对于depthwise卷积操作，其计算量为：![](/img/mobilenet/分辨率超参数计算量.jpg)
 
 
 
