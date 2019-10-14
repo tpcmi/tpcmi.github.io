@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      “【R】MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
+title:      “MobileNets"
 date:       2019-10-09 08:00:00
 author:     "Tp"
 header-img: "img/post-bg-2015.jpg"
