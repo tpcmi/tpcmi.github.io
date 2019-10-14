@@ -7,7 +7,7 @@ author:     "Tp"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - CV
-    - Paper
+    - paper
     
 ---
 
