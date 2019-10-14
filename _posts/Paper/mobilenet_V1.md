@@ -6,7 +6,7 @@ author:     "Tp"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - CV
-	- Paper
+				    - Paper
 ---
 
 > 为了构建非常小的**低延迟**模型，可以轻松地匹配移动和嵌入式视觉应用的设计要求，这篇论文提出：
