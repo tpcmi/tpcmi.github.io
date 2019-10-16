@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      “MobileNets"
+title:      “MobileNets_v1"
 date:       2019-10-09 08:00:00
 author:     "Tp"
 header-img: "img/post-bg-2015.jpg"
@@ -13,24 +13,6 @@ tags:
 
 - an efﬁcient network architecture 
 - a set of two hyper-parameters
-
-## 前置内容
-
-### 1.Depthwise Separable convolutions(深度可分离卷积)
-
-### 2.Factorized Networks
-
-### 3.Xception-->Inception V3
-
-### 4.Squeezentnet
-
-### 5.Structured transform networks and Deep fried convnets(结构变换网络)
-
-### 6.Obtain small networks：shrinking，factorizing，compressing pretrained networks，distillation
-
-
-
-
 
 
 
@@ -97,7 +79,7 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 ## 补充
 
-### n. 参数量和计算量、FLOPs
+### 1. 参数量和计算量、FLOPs
 
 > 参数量是参与计算参数的个数,占用内存空间
 
@@ -112,4 +94,14 @@ However it only ﬁlters input channels, it does not combine them to create new 
 若考虑偏置：FLOPs= <a href="https://www.codecogs.com/eqnedit.php?latex=(C_{in}*2*K*K)*H_{out}*W_{out}*C_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(C_{in}*2*K*K)*H_{out}*W_{out}*C_{out}" title="(C_{in}*2*K*K)*H_{out}*W_{out}*C_{out}" /></a>
 
 不考虑偏置：FLOPs= <a href="https://www.codecogs.com/eqnedit.php?latex=(C_{in}*2*K*K-1)*H_{out}*W_{out}*C_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(C_{in}*2*K*K-1)*H_{out}*W_{out}*C_{out}" title="(C_{in}*2*K*K-1)*H_{out}*W_{out}*C_{out}" /></a>
+
+### 2.Factorized Networks
+
+### 3.Xception-->Inception V3
+
+### 4.Squeezentnet
+
+### 5.Structured transform networks and Deep fried convnets(结构变换网络)
+
+### 6.Obtain small networks：shrinking，factorizing，compressing pretrained networks，distillation
 
