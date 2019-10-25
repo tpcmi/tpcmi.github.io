@@ -3,12 +3,14 @@ layout:     post
 title:      “MobileNets_v1"
 date:       2019-10-09 08:00:00
 author:     "Tp"
-header-img: "img/post-bg-2015.jpg"
+header-img: "/img/the_most_beautiful_road_in_the_world_2-wallpaper-1920x1080.jpg"
 tags:
     - CV 
     - Paper
 ---
 
+# MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications
+>
 > 为了构建非常小的**低延迟**模型，可以轻松地匹配移动和嵌入式视觉应用的设计要求，这篇论文提出：
 
 - an efﬁcient network architecture 

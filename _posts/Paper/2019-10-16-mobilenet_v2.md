@@ -3,7 +3,7 @@ layout:     post
 title:      “MobileNets_v2"
 date:       2019-10-16 08:00:00
 author:     "Tp"
-header-img: "img/post-bg-2015.jpg"
+header-img: "/img/the_most_beautiful_road_in_the_world_2-wallpaper-1920x1080.jpg"
 tags:
     - CV 
     - Paper
