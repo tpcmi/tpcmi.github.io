@@ -10,8 +10,9 @@ tags:
 ---
 
 # MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications
->
-> 为了构建非常小的**低延迟**模型，可以轻松地匹配移动和嵌入式视觉应用的设计要求，这篇论文提出：
+
+[原文](https://arxiv.org/pdf/1704.04861.pdf)
+> 构建非常小的**低延迟**模型，可以轻松地匹配移动和嵌入式视觉应用的设计要求：
 
 - an efﬁcient network architecture 
 - a set of two hyper-parameters
@@ -42,9 +43,15 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 
 
-其中mobilenet使用的是**3✖️3**的卷积核，运算速度比标准卷积小8至9倍，而精度降低很少
+其中mobilenet使用的是**3✖️3**的卷积核，运算计算量和参数量比标准卷积小8至9倍，而精度降低很少
 
 ![](/img/mobilenet/深度分离卷积图示.png)
+
+
+
+局部网络结构展示：
+
+![](/img/mobilenet/深度分离卷积局部结构.png)
 
 
 
@@ -53,9 +60,7 @@ However it only ﬁlters input channels, it does not combine them to create new 
 - 该参数用于控制特征图的channel数量
 - 对于depthwise卷积操作，其计算量为：![](/img/mobilenet/宽度超参数计算量.jpg)
 
-
-
-
+计算量和参数量大约减少了${α^2}$
 
 
 
@@ -65,7 +70,11 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 - 对于depthwise卷积操作，其计算量为：![](/img/mobilenet/分辨率超参数计算量.jpg)
 
+计算量和参数量大约减少了${ρ^2}$
 
+
+
+![](/img/mobilenet/减少参数量和计算量示意.png)
 
 
 
@@ -97,13 +106,17 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 不考虑偏置：FLOPs= <a href="https://www.codecogs.com/eqnedit.php?latex=(C_{in}*2*K*K-1)*H_{out}*W_{out}*C_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(C_{in}*2*K*K-1)*H_{out}*W_{out}*C_{out}" title="(C_{in}*2*K*K-1)*H_{out}*W_{out}*C_{out}" /></a>
 
-### 2.Factorized Networks
+### 2.Xception-->Inception V3
 
-### 3.Xception-->Inception V3
+### 3.Squeezentnet
 
-### 4.Squeezentnet
+### 4.GEMM
 
-### 5.Structured transform networks and Deep fried convnets(结构变换网络)
+> 网络90%以上的运算都是集中在全连接层以及卷积层中，通常是通过GEMM，利用系统的多级存储结构和程序执行的局部性来充分加速运算。
 
-### 6.Obtain small networks：shrinking，factorizing，compressing pretrained networks，distillation
+- [Why GEMM is at the heart of deep learning](https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/)
+
+
+
+
 

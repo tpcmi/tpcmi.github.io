@@ -11,8 +11,9 @@ tags:
 
 # MobileNetV2: Inverted Residuals and Linear Bottlenecks
 
-> based on an inverted residual structure where the shortcut connections are between the thin bottleneck layers.
->
+[原文](https://arxiv.org/pdf/1801.04381.pdf)
+
+>based on an inverted residual structure where the shortcut connections are between the thin bottleneck layers.
 > 主要解决了V1在训练过程中非常容易特征退化的问题
 
 ## Depthwise Separable Convolutions
@@ -46,6 +47,20 @@ tags:
 ## 补充
 
 ### 1.[Manifold(流形)](https://www.cnblogs.com/jiangxinyang/p/9314256.html)
+
+### 2.network pruning
+
+### 3.connectivity learning
+
+### 4.genetic algorithms
+
+### 5.reinforcement learning
+
+### 6.Residual block
+
+
+
+
 
 
 
