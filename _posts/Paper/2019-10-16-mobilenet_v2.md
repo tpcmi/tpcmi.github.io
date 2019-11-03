@@ -31,7 +31,6 @@ tags:
 
 
 
-
 ## Linear Bottlenecks
 
 > ReLU会对channel数较低的张量造成较大的信息损耗。如下图所示，当原始输入维度数增加到15以后再加ReLU，基本不会丢失太多的信息；但如果只把原始输入维度增加至2~5后再加ReLU，则会出现较为严重的信息丢失，除非`imput manifold`可以嵌入到激活空间的显著的低维子空间。
@@ -40,7 +39,22 @@ tags:
 
 因此执行完降维的卷积后不会再使用ReLU
 
+**-->** 比较Mobilenet_V1与Mobilenet_V2
 
+![](/img/mobilenet/mobilenet基本元结构.png)
+
+![](/img/mobilenet/mobilenetv2基本元结构.png)
+
+
+
+
+
+## Some little things
+
+1. 除了最后Average层，全部结构基本上都是使用stride=2来进行下采样
+池化下采样参数少（没有），而很多实验表明stride为2的卷积下采样效果更好
+2. short cut只对stride=1使用，stride=2不使用，是为了保证输入输出的维度相同
+3. 残差
 
 
 
