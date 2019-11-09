@@ -108,13 +108,13 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 ### 2.Xception-->Inception V3
 
-### 3.Squeezentnet
-
-### 4.GEMM
+### 3.GEMM
 
 > 网络90%以上的运算都是集中在全连接层以及卷积层中，通常是通过GEMM，利用系统的多级存储结构和程序执行的局部性来充分加速运算。
 
 - [Why GEMM is at the heart of deep learning](https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/)
+
+### 4.空间分离卷积
 
 
 
