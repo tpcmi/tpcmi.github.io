@@ -94,7 +94,7 @@ However it only ﬁlters input channels, it does not combine them to create new 
 
 > 参数量是参与计算参数的个数,占用内存空间
 
-若输入通道![C_{in}](https://math.jianshu.com/math?formula=C_%7Bin%7D)和输出通道![C_{out}](https://math.jianshu.com/math?formula=C_%7Bout%7D)，则参数量为：<a href="https://www.codecogs.com/eqnedit.php?latex=C_{in}*(K*K)&plus;1)*C_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C_{in}*(K*K)&plus;1)*C_{out}" title="C_{in}*(K*K)+1)*C_{out}" /></a>
+若输入通道![C_{in}](https://math.jianshu.com/math?formula=C_%7Bin%7D)和输出通道![C_{out}](https://math.jianshu.com/math?formula=C_%7Bout%7D)，则参数量为：<a href="https://www.codecogs.com/eqnedit.php?latex=（C_{in}*K*K)&plus;1)*C_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(C_{in}*K*K&plus;1)*C_{out}" title="C_{in}*(K*K)+1)*C_{out}" /></a>
 
 > 计算量(乘加次数)，MAC(Multiply Accumulate)，需要考虑输出map的大小，1个MAC算两次操作
 
@@ -113,6 +113,7 @@ However it only ﬁlters input channels, it does not combine them to create new 
 > 网络90%以上的运算都是集中在全连接层以及卷积层中，通常是通过GEMM，利用系统的多级存储结构和程序执行的局部性来充分加速运算。
 
 - [Why GEMM is at the heart of deep learning](https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/)
+- [im2col](https://blog.csdn.net/Daycym/article/details/83826222)方法,优化运算速度，减少运算时间
 
 ### 4.空间分离卷积
 
