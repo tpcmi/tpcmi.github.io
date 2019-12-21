@@ -1,23 +1,23 @@
 # Site settings
-title: Tp's Blog
-SEOTitle: 田鹏的博客 | Tp's Blog
+title: AeroliTh.ink
+SEOTitle: AeroliTh.ink | 像陨石一样思考
 header-img: img/home-bg.jpg
-email:  724801800@qq.com
-description: "Only time will tell"
-keyword: "Deep Learning,CV"
-url: "http://tpcmi.github.io"              # your host, for absolute URL
+email: cjiaying14@foxmail.com
+description: "你来了"
+keyword: "今天天气真好。"
+url: "http://aerolith.ink"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
-
 
 
 
 # SNS settings
 RSS: false
-weibo_username:     
+weibo_username: u/1776146357
 zhihu_username:     
-github_username: tpcmi
+github_username: 
 #twitter_username:  
-facebook_username:  
+facebook_username: 
+linkedin_username: jiaying-chen-996873103
 
 
 
@@ -33,7 +33,8 @@ anchorjs: true                          # if you want to customize anchor. check
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate, jemoji]
+
 
 
 
@@ -43,61 +44,52 @@ gems: [jekyll-paginate]
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+  input: GFM           # use Github Flavored Markdown !important
 
+## Disqus settings
+#disqus_username: aerolith-ink    # use the shortname for the forum, not the account.
 
-
-#Disqus settings
-disqus_username: tpcmi
-
-# Duoshuo settings
-#duoshuo_username: 
-# Share component is depend on Comment so we can NOT use share only.
-#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+# Gitalk settings
+comment_gitalk_clientId: 77df11fe5b8fbafafd93
+comment_gitalk_clientSecret: b92ba098466a169a68005cd21f9129a14595f814
+comment_gitalk_repo: aerolithink.github.io
+github_username: aerolithink
 
 
 
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4c7b28e4befa2f7a8af3647a6ee7da7d
+ba_track_id: 21a1b897cecb6f66dd09f722ae1b15e5
 # Google Analytics
-#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
+##ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+##ga_domain: aerolith.ink
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "有阴影的地方必有光"
-sidebar-avatar: /img/zgr.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "像陨石一样思考。"
+sidebar-avatar: /img/avatar-AI.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 0           # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
-
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
 
 # Friends
 friends: [
-    '''
     {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
+        title: "TUPA",
+        href: "http://inhi.kim"
     },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
+        title: "Resuly",
+        href: "http://resuly.me"
     }
-    '''
+
 ]
