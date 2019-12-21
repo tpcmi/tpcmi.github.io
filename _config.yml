@@ -1,23 +1,23 @@
 # Site settings
-title: AeroliTh.ink
-SEOTitle: AeroliTh.ink | 像陨石一样思考
+title: Tpcmi
+SEOTitle: Tpcmi | 
 header-img: img/home-bg.jpg
-email: cjiaying14@foxmail.com
-description: "你来了"
+email: 724801800@qq.com
+description: "有阴影的地方必有光"
 keyword: "今天天气真好。"
-url: "http://aerolith.ink"              # your host, for absolute URL
+url: "tpcmi.github.io"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
 # SNS settings
 RSS: false
-weibo_username: u/1776146357
+weibo_username: 
 zhihu_username:     
-github_username: 
+github_username: tpcmi
 #twitter_username:  
 facebook_username: 
-linkedin_username: jiaying-chen-996873103
+linkedin_username: 
 
 
 
@@ -27,7 +27,7 @@ highlighter: rouge
 permalink: pretty
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: False                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
 
@@ -50,17 +50,17 @@ kramdown:
 #disqus_username: aerolith-ink    # use the shortname for the forum, not the account.
 
 # Gitalk settings
-comment_gitalk_clientId: 77df11fe5b8fbafafd93
-comment_gitalk_clientSecret: b92ba098466a169a68005cd21f9129a14595f814
-comment_gitalk_repo: aerolithink.github.io
-github_username: aerolithink
+#comment_gitalk_clientId: 77df11fe5b8fbafafd93
+#comment_gitalk_clientSecret: b92ba098466a169a68005cd21f9129a14595f814
+#comment_gitalk_repo: aerolithink.github.io
+#github_username: aerolithink
 
 
 
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 21a1b897cecb6f66dd09f722ae1b15e5
+#ba_track_id: 21a1b897cecb6f66dd09f722ae1b15e5
 # Google Analytics
 ##ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 ##ga_domain: aerolith.ink
@@ -69,7 +69,7 @@ ba_track_id: 21a1b897cecb6f66dd09f722ae1b15e5
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "像陨石一样思考。"
+sidebar-about-description: "花开无声的事"
 sidebar-avatar: /img/avatar-AI.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -84,12 +84,13 @@ service-worker: true
 
 # Friends
 friends: [
-    {
-        title: "TUPA",
-        href: "http://inhi.kim"
-    },{
-        title: "Resuly",
-        href: "http://resuly.me"
-    }
+
+    # {
+    #     title: "TUPA",
+    #     href: "http://inhi.kim"
+    # },{
+    #     title: "Resuly",
+    #     href: "http://resuly.me"
+    # }
 
 ]
