@@ -1,0 +1,52 @@
+I"<p>[toc]</p>
+
+<h2 id="powxn">Pow(x,n)</h2>
+
+<p>Implement pow(x, n), which calculates x raised to the power n (xn).</p>
+
+<p>Example 1:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.00000, 10
+Output: 1024.00000
+</code></pre></div></div>
+<p>Example 2:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.10000, 3
+Output: 9.26100
+</code></pre></div></div>
+<p>Example 3:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.00000, -2
+Output: 0.25000
+Explanation: 2-2 = 1/22 = 1/4 = 0.25
+</code></pre></div></div>
+<p>Note:</p>
+
+<ul>
+  <li>100.0 &lt; x &lt; 100.0</li>
+  <li>n is a 32-bit signed integer, within the range [−231, 231 − 1]</li>
+</ul>
+
+<p><strong>方法一：暴力求解</strong></p>
+
+<pre><code class="language-C++">class Solution {
+public:
+    double myPow(double x, int n) {
+        long long N = n;
+        if(N &lt; 0){
+            x = 1/x;
+            N = -N;
+        }
+        double ans = 1;
+        for(int i = 0;i &lt; N;i++){
+            ans *= x; 
+        }
+        return ans;
+    }
+};
+</code></pre>
+
+<p><strong>c++ solution:</strong></p>
+
+<ul>
+  <li>时间复杂度：O(n)</li>
+  <li>空间复杂度：O(1)</li>
+</ul>
+:ET

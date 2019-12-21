@@ -1,0 +1,199 @@
+I"`S<p>[toc]</p>
+
+<h2 id="two-sum">Two sum</h2>
+
+<blockquote>
+  <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+</blockquote>
+
+<p><strong>Example:</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given nums = [2, 7, 11, 15], target = 9,
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+</code></pre></div></div>
+
+<h3 id="python-solution">python solution：</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">twoSum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">j</span><span class="o">=</span><span class="n">target</span><span class="o">-</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">nums</span> <span class="ow">and</span> <span class="n">nums</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">!=</span><span class="n">i</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">nums</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">j</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<h3 id="c-solution">c solution</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span><span class="o">*</span> <span class="nf">twoSum</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">numsSize</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">returnSize</span><span class="p">){</span>
+    <span class="kt">int</span><span class="o">*</span> <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="o">*</span> <span class="n">returnSize</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numsSize</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">numsSize</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">nums</span> <span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+                <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+                <span class="o">*</span><span class="n">returnSize</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+                <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+</code></pre></div></div>
+
+<h3 id="c-solution-1">c++ solution</h3>
+
+<h2 id="add-two-numbers">Add Two Numbers</h2>
+
+<blockquote>
+  <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+</blockquote>
+
+<p><strong>Example:</strong></p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+Output: 7 -&gt; 0 -&gt; 8
+Explanation: 342 + 465 = 807.
+</code></pre></div></div>
+
+<h3 id="python-solution-1">python solution</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">addTwoNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l1</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">l2</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
+        <span class="n">re</span><span class="o">=</span><span class="n">ListNode</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">r</span><span class="o">=</span><span class="n">re</span>
+        <span class="n">carry</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">l1</span> <span class="ow">or</span> <span class="n">l2</span><span class="p">):</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">l1</span><span class="o">.</span><span class="n">val</span> <span class="k">if</span> <span class="n">l1</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">l2</span><span class="o">.</span><span class="n">val</span> <span class="k">if</span> <span class="n">l2</span> <span class="k">else</span> <span class="mi">0</span>
+            <span class="n">s</span><span class="o">=</span><span class="n">carry</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+            <span class="n">carry</span><span class="o">=</span><span class="n">s</span><span class="o">//</span><span class="mi">10</span>
+            <span class="n">r</span><span class="o">.</span><span class="nb">next</span><span class="o">=</span><span class="n">ListNode</span><span class="p">(</span><span class="n">s</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="nb">next</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">l1</span><span class="o">!=</span><span class="bp">None</span><span class="p">):</span><span class="n">l1</span><span class="o">=</span><span class="n">l1</span><span class="o">.</span><span class="nb">next</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">l2</span><span class="o">!=</span><span class="bp">None</span><span class="p">):</span><span class="n">l2</span><span class="o">=</span><span class="n">l2</span><span class="o">.</span><span class="nb">next</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">carry</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">):</span>
+            <span class="n">r</span><span class="o">.</span><span class="nb">next</span><span class="o">=</span><span class="n">ListNode</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="nb">next</span>
+</code></pre></div></div>
+
+<h3 id="c-solution-2">c++ solution</h3>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="nl">public:</span>
+    <span class="n">ListNode</span><span class="o">*</span> <span class="n">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">l1</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">l2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ListNode</span> <span class="n">vHead</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">vHead</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">l1</span> <span class="o">||</span> <span class="n">l2</span> <span class="o">||</span> <span class="n">flag</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">tmp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">l1</span> <span class="o">!=</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="n">tmp</span> <span class="o">+=</span> <span class="n">l1</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">l2</span> <span class="o">!=</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="n">tmp</span> <span class="o">+=</span> <span class="n">l2</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">;</span>
+            <span class="n">tmp</span> <span class="o">+=</span> <span class="n">flag</span><span class="p">;</span>
+            
+            <span class="n">flag</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+            <span class="n">tmp</span> <span class="o">%=</span> <span class="mi">10</span><span class="p">;</span>
+            
+            <span class="n">ListNode</span> <span class="o">*</span><span class="n">next</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">?</span> <span class="n">l1</span> <span class="o">:</span> <span class="n">l2</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">next</span> <span class="o">==</span> <span class="nb">nullptr</span><span class="p">)</span> <span class="n">next</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>
+            <span class="n">next</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">=</span> <span class="n">tmp</span><span class="p">;</span>
+            
+            <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">l1</span> <span class="o">=</span> <span class="n">l1</span> <span class="o">?</span> <span class="n">l1</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">:</span> <span class="nb">nullptr</span><span class="p">;</span>
+            <span class="n">l2</span> <span class="o">=</span> <span class="n">l2</span> <span class="o">?</span> <span class="n">l2</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">:</span> <span class="nb">nullptr</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">vHead</span><span class="p">.</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</h2>
+
+<p>Given a string, find the length of the longest substring without repeating characters.</p>
+
+<p>Example 1:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "abcabcbb"
+Output: 3 
+Explanation: The answer is "abc", with the length of 3. 
+</code></pre></div></div>
+
+<p>Example 2:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+</code></pre></div></div>
+<p>Example 3:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3. 
+             Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+</code></pre></div></div>
+
+<h3 id="python-solution-2">python solution</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">lengthOfLongestSubstring</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span><span class="k">return</span> <span class="mi">0</span>
+        <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">lookup</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+        <span class="n">max_len</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">cur_len</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">cur_len</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">while</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">lookup</span><span class="p">:</span>
+                <span class="n">lookup</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">left</span><span class="p">])</span>
+                <span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">cur_len</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">cur_len</span> <span class="o">&gt;</span> <span class="n">max_len</span><span class="p">:</span><span class="n">max_len</span> <span class="o">=</span> <span class="n">cur_len</span>
+            <span class="n">lookup</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">max_len</span>
+
+</code></pre></div></div>
+
+<h2 id="reverse-integer">Reverse Integer</h2>
+
+<p>Given a 32-bit signed integer, reverse digits of an integer.</p>
+
+<p>Example 1:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 123
+Output: 321
+</code></pre></div></div>
+<p>Example 2:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: -123
+Output: -321
+</code></pre></div></div>
+<p>Example 3:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 120
+Output: 21
+</code></pre></div></div>
+
+<p>Note:
+Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
+
+<h3 id="python-solution-3">python solution</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">num</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">num</span><span class="o">&gt;</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="n">num</span><span class="o">=</span><span class="mi">0</span>
+        <span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">num</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">][:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">num</span><span class="o">&gt;</span><span class="nb">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">):</span>
+                <span class="n">num</span><span class="o">=</span><span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">num</span><span class="o">=-</span><span class="n">num</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">num</span><span class="o">=</span><span class="mi">0</span>
+                    
+        <span class="k">return</span> <span class="n">num</span>
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,158 @@
+I"69<p>[toc]</p>
+
+<h2 id="9palindrome-number">9.Palindrome Number</h2>
+
+<p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.</p>
+
+<p>Example 1:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 121
+Output: true
+</code></pre></div></div>
+<p>Example 2:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+</code></pre></div></div>
+<p>Example 3:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+</code></pre></div></div>
+
+<p><strong>python solution:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>   
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">False</span>
+ 
+</code></pre></div></div>
+
+<h2 id="13roman-to-integer">13.Roman to Integer</h2>
+
+<p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+</code></pre></div></div>
+<p>For example, two is written as II in Roman numeral, just two one’s added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.</p>
+
+<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I can be placed before V (5) and X (10) to make 4 and 9. 
+X can be placed before L (50) and C (100) to make 40 and 90. 
+C can be placed before D (500) and M (1000) to make 400 and 900.
+</code></pre></div></div>
+
+<p>Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.</p>
+
+<p>Example 1:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "III"
+Output: 3
+</code></pre></div></div>
+<p>Example 2:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "IV"
+Output: 4
+</code></pre></div></div>
+<p>Example 3:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "IX"
+Output: 9
+</code></pre></div></div>
+<p>Example 4:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "LVIII"
+Output: 58
+Explanation: L = 50, V= 5, III = 3.
+</code></pre></div></div>
+<p>Example 5:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: "MCMXCIV"
+Output: 1994
+Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+</code></pre></div></div>
+
+<p><strong>python solution:</strong>
+<em>mine</em></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">romanToInt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">d_1</span> <span class="o">=</span> <span class="p">{</span><span class="s">'I'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">'V'</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">'X'</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">'L'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s">'M'</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+            <span class="s">'IV'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s">'IX'</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s">'XL'</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s">'XC'</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s">'CD'</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="s">'CM'</span><span class="p">:</span> <span class="mi">900</span><span class="p">}</span>
+        <span class="n">d_2</span> <span class="o">=</span> <span class="p">[</span><span class="s">'IV'</span><span class="p">,</span> <span class="s">'IX'</span><span class="p">,</span> <span class="s">'XL'</span><span class="p">,</span> <span class="s">'XC'</span><span class="p">,</span> <span class="s">'CD'</span><span class="p">,</span> <span class="s">'CM'</span><span class="p">]</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="ow">in</span> <span class="n">d_2</span><span class="p">:</span>
+                <span class="n">num</span> <span class="o">+=</span> <span class="n">d_1</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]]</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">num</span> <span class="o">+=</span> <span class="n">d_1</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+                <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">num</span>
+</code></pre></div></div>
+<p><em>better one</em></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">romanToInt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'I'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'IV'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s">'V'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s">'IX'</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="s">'X'</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s">'XL'</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="s">'L'</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="s">'XC'</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span> <span class="s">'CD'</span><span class="p">:</span><span class="mi">300</span><span class="p">,</span> <span class="s">'D'</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span> <span class="s">'CM'</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span> <span class="s">'M'</span><span class="p">:</span><span class="mi">1000</span><span class="p">}</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</code></pre></div></div>
+<p><em><strong>notes:</strong></em></p>
+<ol>
+  <li>此处构建的罗马数字对照的字典：实际值-子串内左边罗马数字值</li>
+  <li><code class="highlighter-rouge">dict.get()</code> 方法：第一个值为要在字典里寻找的索引，第二个值为当第一个值没找到时的默认值</li>
+  <li><code class="highlighter-rouge">enumerate</code>方法，迭代器</li>
+</ol>
+
+<h2 id="14-longest-common-prefix">14. Longest Common Prefix</h2>
+
+<p>Write a function to find the longest common prefix string amongst an array of strings.</p>
+
+<p>If there is no common prefix, return an empty string “”.</p>
+
+<p>Example 1:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: ["flower","flow","flight"]
+Output: "fl"
+</code></pre></div></div>
+<p>Example 2:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
+</code></pre></div></div>
+<p>Note:</p>
+
+<p>All given inputs are in lowercase letters <code class="highlighter-rouge">a</code>-<code class="highlighter-rouge">z</code>.</p>
+
+<p><strong>python solution:</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">longestCommonPrefix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">):</span>
+        <span class="s">"""
+        :type strs: List[str]
+        :rtype: str
+        """</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="s">""</span>
+        <span class="k">for</span> <span class="n">tmp</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">strs</span><span class="p">):</span>
+            <span class="n">tmp_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tmp_set</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="n">tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">break</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+</code></pre></div></div>
+
+<p><strong><em>notes:</em></strong></p>
+
+<ol>
+  <li><code class="highlighter-rouge">zip</code>方法的作用类似于解压缩. 如果单<code class="highlighter-rouge">zip(strs)</code>会返回列表内所有元素，当在<code class="highlighter-rouge">strs</code>前加上<code class="highlighter-rouge">*</code>后，返回的组数是最短字符串的长度，每一组内的元素是每个字符串在相同位置的值</li>
+  <li><code class="highlighter-rouge">set</code>方法是清除重复元素</li>
+</ol>
+:ET

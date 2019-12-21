@@ -1,0 +1,13 @@
+I"3<h1 id="deep-residual-learning-for-image-recognition">Deep Residual Learning for Image Recognition</h1>
+
+<p><a href="https://arxiv.org/pdf/1512.03385.pdf">原文</a></p>
+
+<p>人们通过实验确信，随着网络的加深，可以提高网络的学习能力，但是现实结果是当达到一定深度后出现了学习退化的现象。Resnet 考虑的是在一种极端情况下，深层次网络什么也没有学到，但至少表现能力不会比浅层网络要差，即恒等映射（Identity mapping）。</p>
+
+<p><img src="/Users/tianpeng/Documents/myblog/img/resnet/Residual learning-a building block.png" alt="" /></p>
+
+<blockquote>
+  <p>In this case ,the shortcut connections can simply perform <em>identity</em> mapping, and their outpus are added to the outputs of the stacked layers</p>
+</blockquote>
+
+:ET
