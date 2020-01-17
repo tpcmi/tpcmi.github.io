@@ -112,3 +112,29 @@ It was a matter of chance that I should have rented a house in one of the strang
 > - riotous:    adj.骚乱的;暴乱的;狂欢的;纵情欢闹的
 > - formation:    n.组成;形成;组成物;形成物;编队;队形
 > - contour:    n.外形;轮廓;(地图上表示相同海拔各点的)等高线
+
+I lived at West Egg, the—well, the less fashionable of the two, though this is a most ==superficial== tag to express the ==bizarre== and not a little ==sinister== contrast between them. My house was at the very tip of the egg, only fifty yards from the Sound, and squeezed between two huge places that rented for twelve or fifteen thousand a season. The one on my right was a ==colossal== affair by any standard—it was a factual imitation of some Hôtel de Ville in Normandy, with a tower on one side, spanking new under a thin beard of raw ivy, and a ==marble== swimming pool and more than forty acres of lawn and garden. It was Gatsby’s mansion. Or rather, as I didn’t know Mr. Gatsby it was a mansion inhabited by a gentleman of that name. My own house was an eye-sore, but it was a small eye-sore, and it had been overlooked, so I had a view of the water, a partial view of my neighbor’s lawn, and the ==consoling== proximity of millionaires—all for eighty dollars a month.
+
+> - superficial:    adj.粗略的;肤浅的;粗枝大叶的;浅薄的;表面的;外面的;外表的;表层的;表皮的
+> - bizarre:    adj. 极其怪诞的;异乎寻常的
+> - sinister:    adj.邪恶的;险恶的;不祥的;有凶兆的
+> - colossal:   adj.巨大的;庞大的
+> - marble:    n.大理石;(玻璃)弹子;弹子游戏
+>                   v.使…显得斑驳;使…染上大理石花纹
+> - consoling:    v.安慰;抚慰;慰藉
+>                       n.(机器、电子设备等的)控制台，操纵台，仪表板
+
+Across the courtesy bay the white palaces of fashionable East Egg ==glittered== along the water, and the history of the summer really begins on the evening I drove over there to have dinner with the Tom Buchanans. Daisy was my second cousin once removed and I’d known Tom in college. And just after the war I spent two days with them in Chicago.
+
+> - glitter:    v.闪亮;闪耀;光彩夺目;闪现(某种强烈情感)
+
+Her husband, among various physical accomplishments, had been one of the most powerful ends that ever played football at New Haven—a national ==figure== in a way, one of those men who reach such an ==acute== limited excellence at twenty-one that everything ==afterward== ==savor==s of anti-climax. His family were enormously wealthy—even in college his freedom with money was a matter for reproach—but now he’d left Chicago and come east in a fashion that rather took your breath away: for instance he’d brought down a string of polo ponies from Lake Forest. It was hard to realize that a man in my own generation was wealthy enough to do that.
+
+> - figure:    n.(代表数量，尤指官方资料中的)数字;数字符号;字码;位数;算术
+>               v.是重要部分;是…的部分;认为，认定(某事将发生或属实);计算(数量或成本)
+> - acute:    adj.十分严重的;(疾病)急性的;灵敏的
+> - afterward:    adv.之后;后来
+> - savor:    n.味;香味;一点儿;兴味
+>                 v.使有味[有趣味];欣赏…的味;玩味;鉴赏
+
+Why they came east I don’t know. They had spent a year in France, for no particular reason, and then drifted here and there unrestfully wherever people played polo and were rich together. This was a permanent move, said Daisy over the telephone, but I didn’t believe it—I had no sight into Daisy’s heart but I felt that Tom would drift on forever seeking a little wistfully for the dramatic turbulence of some irrecoverable football game.
