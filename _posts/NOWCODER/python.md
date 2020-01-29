@@ -118,3 +118,9 @@ for f in l:
 Tuple是从第一个开始比较，相同则比较下一位，且数量多的大
 
 - Tuple的值不可以改变
+
+## 无穷大
+```python
+float('inf')
+```
+
