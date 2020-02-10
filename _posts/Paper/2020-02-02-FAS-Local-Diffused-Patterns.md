@@ -72,5 +72,7 @@ tags:
 
 ## References
 
-1. [Face Liveness Detection From a Single Image via Diffusion Speed Model](/paper/FAS local diffused pattern/Face Liveness Detection From a Single Image via Diffusion Speed Model.pdf)
-2. 
+1. [Face Liveness Detection using Local Diffused Patterns](/paper/FAS local diffused pattern/Face Liveness Detection using Local Diffused Patterns.pdf)
+
+2. [Face Liveness Detection From a Single Image via Diffusion Speed Model](/paper/FAS local diffused pattern/Face Liveness Detection From a Single Image via Diffusion Speed Model.pdf)
+3. 
