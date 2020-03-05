@@ -37,3 +37,20 @@ sudo rm /var/lib/dpkg/lock-frontend
 sudo apt-get install -f
 ```
 
+## 4. 终端设置分辨率
+
+```
+xrandr    //查看当前的输出设备以及有哪些分辨率
+xrandr --output 设备名 --mode 分辨率
+```
+
+## 5. 查看端口是否被占用
+
+```cmd
+netstat -anp |grep Num
+or
+lsof -i: Num
+```
+
+
+
