@@ -1,5 +1,5 @@
 ---
-layout:     post
+ layout:     post
 title:      “Salient Object Detection"
 date:       2020-02-07 18:00:00
 author:     "Tp"
