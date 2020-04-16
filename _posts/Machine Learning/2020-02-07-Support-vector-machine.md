@@ -5,8 +5,9 @@ date:       2020-02-07 18:00:00
 author:     "Tp"
 header-img: "img/the_most_beautiful_road_in_the_world_2-wallpaper-1920x600.jpg"
 tags:
-	- MachineLearning
-	- SVM
+	
+    - MachineLearning
+    - SVM
 ---
 
 [toc]
