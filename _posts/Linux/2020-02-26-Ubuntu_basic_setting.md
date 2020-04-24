@@ -54,3 +54,111 @@ lsof -i: Num
 
 
 
+## 6. 创建新用户、群组
+
+root下创建在home下有完整用户名文件的用户
+
+``` 
+sudo adduser username
+```
+
+home文件夹下即有新用户名文件，但是初始创建时只会有`example.desktop`
+
+`````linux
+xgd-user-dirs-update
+`````
+
+生成所有一系列的文件如documents、Music ....etc.
+
+在每次重启系统时，可以选择哪个用户进行登录，此后再使用`who`指令就是系统启动时的用户，不管是否有切换为其他用户
+
+---
+创建用户组
+
+```
+groupadd -g gid groupname
+```
+
+添加或删除成员
+
+```lilnux
+gpasswd -a 成员名 gpname
+gpasswd -d 成员名 gpname
+```
+
+查看群组成员
+
+````linux
+cat(vim) /etc/group
+````
+
+修改文件所属群组
+
+````linux
+chgrp [option] gpname 文件名
+````
+
+修改文件所属者
+
+```linux
+chown [option] gpname 文件名
+```
+
+修改文件权限
+
+r：4
+
+w：2
+
+x：1
+
+满权限值为7，三个位置设置即可
+
+```linux
+chmod 777 文件名 //各个级别权限多少由位置上的数值决定
+```
+
+- root不论有没有较高的权限，都可以读写执行
+
+- 群组组员继承群组的权限，若所有者也属于群组，所有者的权限不受群组影响
+
+  
+
+## 7. Anaconda 多用户共用
+
+虽然anaconda明面上安装在某个子用户的文件下，但是通过查看`ls -al`可知安装anaconda时权限属于root组，所以可以直接在新的用户`.bashrc`文件中加入anaconda的路径：
+
+````linux
+export PATH=/home/username/anaconda3/bin:$PATH
+````
+
+以上即可以在新的用户里使用conda命令
+
+## 8. 复制
+
+```linux
+cp [option] 源文件 目标文件	/ 一般 -r 就可以了
+```
+
+## 9. 图形界面关闭开启
+
+
+
+````linux
+service lightm stop/start
+````
+
+重新开启图形界面时，如果出现`lightdm.service masked`
+
+```linux
+systemctl unmask lightdm.service
+```
+
+再重新安装一次lightdm即可
+
+```linux
+sudo apt install lightdm
+```
+
+再重新打开即可
+
