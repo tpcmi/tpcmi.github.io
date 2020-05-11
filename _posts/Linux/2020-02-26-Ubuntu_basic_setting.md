@@ -134,10 +134,12 @@ export PATH=/home/username/anaconda3/bin:$PATH
 
 以上即可以在新的用户里使用conda命令
 
-## 8. 复制
+## 8. 复制、移动、删除
 
 ```linux
-cp [option] 源文件 目标文件	/ 一般 -r 就可以了
+cp [option] 源文件 目标文件	// 一般 -r 目录复制就可以了，-p：将所有属性权限也复制
+rm [option] 目标文件	//-f：强制不会有任何报错；
+mv [option] 源文件 目标文件	//可以顺便改名
 ```
 
 ## 9. 图形界面关闭开启
@@ -161,4 +163,12 @@ sudo apt install lightdm
 ```
 
 再重新打开即可
+
+## 10. 虚拟机联网
+
+````llinux
+sudo service network-manager stop
+sudo rm /var/lib/NetworkManager/NetworkManager.state
+sudo service network-manager start
+````
 
