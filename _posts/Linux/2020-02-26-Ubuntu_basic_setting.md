@@ -147,7 +147,8 @@ mv [option] 源文件 目标文件	//可以顺便改名
 
 
 ````linux
-service lightm stop/start
+service lightdm stop/start    //ubuntu
+startx    //centos
 ````
 
 重新开启图形界面时，如果出现`lightdm.service masked`
