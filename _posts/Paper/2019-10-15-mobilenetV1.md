@@ -15,6 +15,7 @@ tags:
 # MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications
 
 [原文](https://arxiv.org/pdf/1704.04861.pdf)
+
 > 构建非常小的**低延迟**模型，可以轻松地匹配移动和嵌入式视觉应用的设计要求：
 
 - an efﬁcient network architecture 
