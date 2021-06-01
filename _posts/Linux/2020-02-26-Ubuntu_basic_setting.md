@@ -27,7 +27,7 @@ ps x|grep vmware    //关闭软件后，找出所有还在运行的VM进程
 kill -9 PID_number
 ```
 
-## 3. 使用 apt install 时“Could not get lock /var/lib/dpkg/lock” & “dpkg: error: dpkg frontend is locked by another process”
+## 3. 使用 apt install 时“Could not get lock /var/lib/dpkg/lock” & “dpkg: error: dpkg frontend is locked by another process” 
 
 ```
 ps afx|grep apt    //找出所有apt进程
@@ -142,7 +142,7 @@ rm [option] 目标文件	//-f：强制不会有任何报错；
 mv [option] 源文件 目标文件	//可以顺便改名
 ```
 
-## 9. 图形界面关闭开启
+## 9. 图形界面关闭开启s
 
 
 
