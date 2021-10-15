@@ -1,19 +1,19 @@
-I"<p>[toc]</p>
+I":<p>[toc]</p>
 
 <h2 id="powxn">Pow(x,n)</h2>
 
 <p>Implement pow(x, n), which calculates x raised to the power n (xn).</p>
 
 <p>Example 1:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.00000, 10
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.00000, 10
 Output: 1024.00000
 </code></pre></div></div>
 <p>Example 2:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.10000, 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.10000, 3
 Output: 9.26100
 </code></pre></div></div>
 <p>Example 3:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.00000, -2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: 2.00000, -2
 Output: 0.25000
 Explanation: 2-2 = 1/22 = 1/4 = 0.25
 </code></pre></div></div>
