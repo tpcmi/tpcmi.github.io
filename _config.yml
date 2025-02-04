@@ -28,7 +28,7 @@ repository               : "tpcmi/tpcmi.github.io"
 teaser                   : "/assets/images/teaser.jpeg"
 logo                     : # "/assets/images/logo.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : # true, false (default)
+breadcrumbs              : true
 words_per_minute         : 150
 enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
