@@ -19,9 +19,9 @@ locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
 title                    : "田鹏的博客"
 title_separator          : "|"
-subtitle                 : #
+subtitle                 : "私の心中の悲しみは年々深くなる。しかし、私の生命はますます華やかに輝く。"
 name                     : "田鹏"
-description              : "私の心中の悲しみは年々深くなる。しかし、私の生命はますます華やかに輝く。"
+description              : "田鹏的博客"
 url                      : "https://tpcmi.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "tpcmi/tpcmi.github.io"
